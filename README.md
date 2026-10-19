@@ -48,3 +48,13 @@ Você deve entregar:
 
 ### Observação
 As refatorações devem melhorar a estrutura interna do projeto sem alterar o resultado esperado das funcionalidades.
+
+
+## Resultado da refatoração
+
+- Relatório técnico: [`docs/RELATORIO_TECNICO.md`](docs/RELATORIO_TECNICO.md)
+- Executar o sistema: `npm start`
+- Executar os testes: `npm test`
+- Composição das dependências: `src/createOrderService.js`
+
+> Nota: o arquivo `src/services/NotificationService.js` era importado pelo projeto original mas não existia no repositório; foi criado a partir do contrato de uso (`sendOrderConfirmation(customer, orderId, total)`).

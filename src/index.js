@@ -2,8 +2,8 @@ const Address = require("./domain/Address");
 const Customer = require("./domain/Customer");
 const Order = require("./domain/Order");
 const OrderItem = require("./domain/OrderItem");
-const OrderService = require("./services/OrderService");
 const ProductRepository = require("./repositories/ProductRepository");
+const createOrderService = require("./createOrderService");
 
 const productRepository = new ProductRepository();
 
@@ -28,7 +28,7 @@ const order = new Order(
   3
 );
 
-const service = new OrderService();
+const service = createOrderService({ productRepository });
 const result = service.process(order);
 
 console.log(JSON.stringify(result, null, 2));
